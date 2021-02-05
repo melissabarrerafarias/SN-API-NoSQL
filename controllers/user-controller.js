@@ -15,7 +15,7 @@ const userController = {
         User.findOne({ _id: params.id })
             .then(dbUserData => {
                 if (!dbUserData) {
-                    res.status(404).json({ message: "Sorry old buddy-o! Looks like this user doesn't exist!" });
+                    res.status(404).json({ message: "Robotic Operation Machine says: 'Sorry old buddy-o! Looks like this user doesn't exist!'" });
                     return;
                 }
                 res.json(dbUserData);
@@ -36,7 +36,7 @@ const userController = {
         User.findOneAndUpdate({ _id: params.id }, body, { new: true })
             .then(dbUserData => {
                 if (!dbUserData) {
-                    res.status(404).json({ message: "Silly goose! We can't update a user that doesn't exist!" });
+                    res.status(404).json({ message: "Computerized Human Robot says: 'Silly goose! We can't update a user that doesn't exist!'" });
                     return;
                 }
                 res.json(dbUserData);
@@ -64,7 +64,7 @@ const userController = {
         )
             .then(dbUserData => {
                 if (!dbUserData) {
-                    res.status(404).json({ message: 'No user found with this userId' });
+                    res.status(404).json({ message: "Really Super Duper Smart AI says: 'No user found with this id'" });
                     return;
                 }
                 res.json(dbUserData);
@@ -80,7 +80,7 @@ const userController = {
         )
             .then(dbUserData => {
                 if (!dbUserData) {
-                    res.status(404).json({ message: 'No user found with this userId' });
+                    res.status(404).json({ message: "Self-Aware Data Collection Robot says: 'Couldn't find a user with this id!'" });
                     return;
                 }
                 res.json(dbUserData)
